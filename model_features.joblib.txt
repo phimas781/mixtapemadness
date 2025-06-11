@@ -1,0 +1,13 @@
+from google.colab import files
+
+# Specify the name of the file you want to download
+file_to_download = 'model_features.joblib'
+
+try:
+    # This command will trigger a download prompt in your browser
+    files.download(file_to_download)
+    print(f"Download initiated for '{file_to_download}'. Check your browser's download pop-up or downloads folder.")
+except Exception as e:
+    print(f"Error downloading '{file_to_download}': {e}")
+    print("Please ensure the file exists in your Colab environment's current directory.")
+    print("You can verify its presence by clicking the 'Files' icon (folder symbol) on the left sidebar in Colab.")

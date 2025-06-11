@@ -1,0 +1,9 @@
+# NEW: Add a download button for the historical data
+            csv_data = artist_data_for_trends.to_csv(index=False).encode('utf-8')
+            st.download_button(
+                label="Download Data as CSV",
+                data=csv_data,
+                file_name=f"{selected_artist_for_trends}_spotify_data.csv",
+                mime="text/csv",
+                help="Click to download the historical song data for this artist."
+            )

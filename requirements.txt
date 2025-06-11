@@ -1,0 +1,28 @@
+# --- Google Colab Cell: Create requirements.txt ---
+
+# Define the content of your requirements.txt file
+requirements_content = """
+streamlit
+pandas
+numpy
+scikit-learn
+spotipy
+matplotlib
+seaborn
+joblib
+"""
+
+# Specify the filename
+filename = 'requirements.txt'
+
+try:
+    # Open the file in write mode ('w') and write the content
+    with open(filename, 'w') as f:
+        f.write(requirements_content.strip()) # .strip() removes leading/trailing whitespace
+
+    print(f"File '{filename}' created successfully in your Colab environment.")
+    print("You can now download it from the 'Files' sidebar on the left.")
+
+except Exception as e:
+    print(f"Error creating '{filename}': {e}")
+    print("Please check your Colab environment permissions or disk space.")
